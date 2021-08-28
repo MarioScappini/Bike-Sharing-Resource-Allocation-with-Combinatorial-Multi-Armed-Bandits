@@ -1,4 +1,4 @@
-# Bike Sharing Resource Allocation with Combinatorial Multi-Armed Bandits - Proposal
+# Bike Sharing Resource Allocation with Combinatorial Multi-Armed Bandits
 
 ---
 
@@ -14,7 +14,7 @@ When we allocate a number of bikes to a certain station we need to perform this 
 
 - We would be using the model presented in the paper "Combinatorial Multi-armed Bandits for Resource Allocation" [https://arxiv.org/pdf/2105.04373.pdf](https://arxiv.org/pdf/2105.04373.pdf)
 - In addition to the UBike Taipei dataset [https://data.gov.tw/dataset/137993](https://data.gov.tw/dataset/137993)
-- The code will be written and executed in google colab ([https://colab.research.google.com/drive/13fNJYW2DSQSDozW-2o7C7Qzwca-WZkRw?usp=sharing](https://colab.research.google.com/drive/13fNJYW2DSQSDozW-2o7C7Qzwca-WZkRw?usp=sharing))
+
 
 ### Objectives
 
