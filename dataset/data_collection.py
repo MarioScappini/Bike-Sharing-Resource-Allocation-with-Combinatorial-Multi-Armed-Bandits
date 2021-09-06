@@ -5,14 +5,14 @@ import numpy as np
 from pathlib import Path
 import pandas as pd
 import requests
-url = "https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json"
+url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
 r = requests.get(url)
 
 global counter
 counter = 0
 
 def init_csv():
-    dataset = pd.DataFrame.from_dict(r.json().get('retVal')).T
+    dataset = pd.DataFrame.from_dict(r.json())
     dataset.set_index('sno')
     dataset = dataset.drop(columns=['sna','ar','lat','lng','sareaen','sarea','aren'])
     dataset.to_csv('db.csv',mode='a',index=False)
@@ -23,7 +23,7 @@ def update_csv():
     counter += 1
     r = requests.get(url)
     time.sleep(1)
-    dataset = pd.DataFrame.from_dict(r.json().get('retVal')).T 
+    dataset = pd.DataFrame.from_dict(r.json()) 
     dataset.set_index('sno')
     dataset = dataset.drop(columns=['sna','ar','lat','lng','sareaen','sarea','aren'])
     dataset.to_csv('db.csv',mode='a',header=False,index=False)
